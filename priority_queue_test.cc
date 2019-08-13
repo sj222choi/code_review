@@ -1,13 +1,8 @@
 #include "priority_queue.h"
 #include <gtest/gtest.h>
 
-// TEST(testCaseName, testName){
-//   ... test body ...
-// }
-
-
-TEST(PriorityQueueTest,Trivial){
-	templatePriorityQueue<int> expTarget;
+TEST(PriorityQueueTest,Trivial) {
+	TemplatePriorityQueue<int> expTarget;
 
 	//Test 1 - Initalize
 	ASSERT_TRUE(expTarget.empty()); // empty test
@@ -25,7 +20,6 @@ TEST(PriorityQueueTest,Trivial){
 	ASSERT_FALSE(expTarget.empty()); // it must not empty
 
 	//Test 3 - pop test
-
 	expTarget.pop();
 	expTarget.pop();
 	expTarget.pop();
@@ -39,15 +33,6 @@ TEST(PriorityQueueTest,Trivial){
 	expTarget.pop();
 	
 	ASSERT_TRUE(expTarget.empty());
-	
-	/* Fail Example - If you activate this code, Test will be fail *
-
-	expTarget.pop();
-	
-	EXPECT_TRUE(expTarget.empty()); // non-Fatal Failure - not terminate this test case when result of empty method is false.
-	ASSERT_EQ(expTarget.size(),0);
-        /**/
-	
 }
 
 int main(int argc, char **argv) {
